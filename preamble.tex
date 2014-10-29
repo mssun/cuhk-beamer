@@ -1,0 +1,66 @@
+\documentclass[aspectratio=1610]{beamer}
+\usepackage{textpos}
+\usepackage{upquote}
+\usepackage{fontenc}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{hyperref}
+%\usepackage[maxnames=100]{biblatex}
+\usepackage{xeCJK}
+\usepackage{tcolorbox}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{soul}
+\usetikzlibrary{patterns}
+\defaultfontfeatures{Mapping=tex-text}
+% \renewcommand\CJKfamilydefault{\CJKsfdefault}
+% \setCJKmainfont{WenQuanYi Micro Hei}
+%\setmainfont[Mapping=tex-text]{Open Sans}
+%\setsansfont{Open Sans}
+%\setmonofont[Mapping=]{Ubuntu Mono}
+%\setbeamerfont{frametitle}{family=\fontspec{Lato}}
+%\setbeamerfont{title}{family=\fontspec{Lato}}
+
+
+% \bibliography{ref}
+\definecolor{cuhkpurple}{RGB}{117,15,109}
+\definecolor{cuhkyellow}{RGB}{221,163,0}
+\definecolor{cuhkblackyellow}{RGB}{153,102,0}
+\definecolor{cuhklightyellow}{RGB}{244,223,176}
+\useoutertheme{infolines}
+\usetheme[height=15mm]{Rochester}
+\setbeamertemplate{navigation symbols}{}
+
+\setCJKmainfont{STHeiti}
+\setCJKmonofont{STHeiti}
+\setmainfont[Mapping=tex-text]{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+\setmonofont[Scale=0.8]{Monaco}
+\setbeamerfont{frametitle}{family=\fontspec{Gill Sans}}
+\setbeamerfont{title}{family=\fontspec{Gill Sans}}
+
+\usecolortheme[RGB={117,15,109}]{structure}
+\setbeamercolor{block title example}{use=structure,fg=white, bg=cuhkyellow}
+\setbeamercolor{block body example}{use=structure,fg=black, bg=cuhklightyellow}
+\setbeamercolor{alerted text}{fg=cuhkpurple, bg=cuhklightyellow}
+
+\newcommand{\boxalert}[1]{{%
+    \usebeamercolor{alerted text}\colorbox{bg}{\alert{#1}}%
+}}
+
+\lstset{%
+    basicstyle=\ttfamily\small,
+    upquote=true,
+}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\specialcell}[2][c]{%
+    \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}
+}
