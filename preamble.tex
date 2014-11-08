@@ -20,13 +20,6 @@
 \usepackage{soul}
 \usetikzlibrary{patterns}
 \defaultfontfeatures{Mapping=tex-text}
-% \renewcommand\CJKfamilydefault{\CJKsfdefault}
-% \setCJKmainfont{WenQuanYi Micro Hei}
-% \setmainfont[Mapping=tex-text]{Open Sans}
-% \setsansfont{Open Sans}
-% \setmonofont[Mapping=]{Ubuntu Mono}
-% \setbeamerfont{frametitle}{family=\fontspec{Lato}}
-% \setbeamerfont{title}{family=\fontspec{Lato}}
 
 
 % \bibliography{ref}
@@ -38,13 +31,23 @@
 \usetheme[height=15mm]{Rochester}
 \setbeamertemplate{navigation symbols}{}
 
-\setCJKmainfont{STHeiti}
-\setCJKmonofont{STHeiti}
-\setmainfont[Mapping=tex-text]{Helvetica Neue}
-\setsansfont{Helvetica Neue}
-\setmonofont[Scale=0.8]{Monaco}
-\setbeamerfont{frametitle}{family=\fontspec{Gill Sans}}
-\setbeamerfont{title}{family=\fontspec{Gill Sans}}
+\IfFileExists{/etc/motd}{ % set font for Linux
+  \renewcommand\CJKfamilydefault{\CJKsfdefault}
+  \setCJKmainfont{WenQuanYi Micro Hei}
+  \setmainfont[Mapping=tex-text]{Open Sans}
+  \setsansfont{Open Sans}
+  \setmonofont[Mapping=]{Ubuntu Mono}
+  \setbeamerfont{frametitle}{family=\fontspec{Lato}}
+  \setbeamerfont{title}{family=\fontspec{Lato}}
+}{ % set font for Mac OS X
+ \setCJKmainfont{STHeiti}
+ \setCJKmonofont{STHeiti}
+ \setmainfont[Mapping=tex-text]{Helvetica Neue}
+ \setsansfont{Helvetica Neue}
+ \setmonofont[Scale=0.8]{Monaco}
+ \setbeamerfont{frametitle}{family=\fontspec{Gill Sans}}
+ \setbeamerfont{title}{family=\fontspec{Gill Sans}}
+ }
 
 \usecolortheme[RGB={117,15,109}]{structure}
 \setbeamercolor{block title example}{use=structure,fg=white, bg=cuhkyellow}
