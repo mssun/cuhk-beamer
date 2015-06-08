@@ -1,4 +1,4 @@
-\documentclass[aspectratio=1610]{beamer}
+\documentclass{beamer}
 \usepackage{textpos}
 \usepackage{upquote}
 \usepackage{fontenc}
@@ -18,6 +18,8 @@
 \usepackage{amssymb}
 \usepackage{pifont}
 \usepackage{soul}
+\usepackage{minted}
+\usepackage{pdfpages}
 \usetikzlibrary{patterns}
 \defaultfontfeatures{Mapping=tex-text}
 
@@ -33,26 +35,40 @@
 
 \IfFileExists{/etc/motd}{ % set font for Linux
   \renewcommand\CJKfamilydefault{\CJKsfdefault}
-  \setCJKmainfont{WenQuanYi Micro Hei}
+  \setCJKmainfont{Source Han Sans CN}
   \setmainfont[Mapping=tex-text]{Open Sans}
   \setsansfont{Open Sans}
-  \setmonofont[Mapping=]{Ubuntu Mono}
-  \setbeamerfont{frametitle}{family=\fontspec{Lato}}
-  \setbeamerfont{title}{family=\fontspec{Lato}}
+  \setmonofont{Source Code Pro}
+  \setbeamerfont{frametitle}{family=\fontspec{Lato}, series=\bfseries}
+  \setbeamerfont{title}{family=\fontspec{Lato}, series=\bfseries}
 }{ % set font for Mac OS X
  \setCJKmainfont{STHeiti}
  \setCJKmonofont{STHeiti}
  \setmainfont[Mapping=tex-text]{Helvetica Neue}
  \setsansfont{Helvetica Neue}
- \setmonofont[Scale=0.8]{Monaco}
+ \setmonofont{Source Code Pro}
  \setbeamerfont{frametitle}{family=\fontspec{Gill Sans}}
  \setbeamerfont{title}{family=\fontspec{Gill Sans}}
  }
+
+ \usefonttheme{professionalfonts}
 
 \usecolortheme[RGB={117,15,109}]{structure}
 \setbeamercolor{block title example}{use=structure,fg=white, bg=cuhkyellow}
 \setbeamercolor{block body example}{use=structure,fg=black, bg=cuhklightyellow}
 \setbeamercolor{alerted text}{fg=cuhkpurple, bg=cuhklightyellow}
+
+% \AtBeginSection[]
+% {
+%    \begin{frame}
+%        \frametitle{Outline}
+%        {\scriptsize
+%        \begin{multicols}{2}
+%        \tableofcontents[currentsection]
+%        \end{multicols}
+%        }
+%    \end{frame}
+% }
 
 \newcommand{\boxalert}[1]{{%
     \usebeamercolor{alerted text}\colorbox{bg}{\alert{#1}}%
@@ -68,3 +84,5 @@
     \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}
 }
 \newcommand{\li}{\lstinline}
+
+\sethlcolor{cuhklightyellow}
