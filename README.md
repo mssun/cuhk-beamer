@@ -7,8 +7,8 @@ Beamer template with The Chinese University of Hong Kong (CUHK) colors and some 
 
 ## Requirements
 * MacTex (XeLaTeX) or TeX Live
-* OS X (fonts: Helvetica Neue, Monaco and Gill Sans)
-* Linux (fonts: Open Sans, Ubuntu Mono and Lato)
+* OS X (fonts: Helvetica Neue, Source Code Pro and Gill Sans)
+* Linux (fonts: Open Sans, Source Code Pro and Lato)
 
 ## Usage
 See sample.tex.
